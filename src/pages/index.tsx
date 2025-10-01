@@ -1,10 +1,16 @@
---- a/src/pages/index.tsx
-+++ b/src/pages/index.tsx
-@@ -1,6 +1,6 @@
- import { useEffect, useMemo, useState } from 'react';
- import { addDays, format, parseISO } from 'date-fns';
--import { APPS_SCRIPT_URL } from '@/lib/config';
-+import { APPS_SCRIPT_URL } from '../lib/config';
+# Patch A
+git apply <<'PATCH'
+(pega aquí el diff A completo)
+PATCH
+
+# o Patch B
+git apply <<'PATCH'
+(pega aquí el diff B completo)
+PATCH
+
+git commit -am "fix: alias '@/lib' (tsconfig) / o quick import"
+git push
+
 
 
 type Registro = {
